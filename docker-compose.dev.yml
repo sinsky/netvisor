@@ -1,6 +1,8 @@
+name: netvisor
+
 services:
   ui:
-    build: 
+    build:
       context: ./ui
       dockerfile: Dockerfile.dev
     volumes:
@@ -32,7 +34,7 @@ services:
         ipv4_address: 172.25.0.6
 
   server:
-    build: 
+    build:
       context: ./backend
       dockerfile: Dockerfile.dev
     command: sh -c "cargo run --bin server"
